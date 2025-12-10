@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run Tests in Docker') {
             steps {
-                // Mount Jenkins workspace/target to container /app/target
+                // Run Maven tests inside container and mount reports to Jenkins workspace
                 bat 'docker run --rm -v %WORKSPACE%\\target:/app/target automation-tests mvn test -DsuiteXmlFile=testng.xml'
             }
         }
