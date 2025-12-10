@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t automation-tests .'
+                bat 'docker build -t automation-tests .'
             }
         }
         stage('Run Tests in Docker') {
             steps {
-                sh 'docker run --rm automation-tests'
+                bat 'docker run --rm automation-tests'
             }
         }
         stage('Publish Reports') {
