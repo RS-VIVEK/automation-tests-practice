@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
@@ -22,8 +23,7 @@
             <version>4.29.0</version>
         </dependency>
 
-        <!-- WebDriverManager (auto driver binaries) -->
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -38,7 +38,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Logging (Log4j2) -->
+        <!-- Logging -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -50,14 +50,14 @@
             <version>2.24.3</version>
         </dependency>
 
-        <!-- Reporting (ExtentReports) -->
+        <!-- ExtentReports -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.1.2</version>
         </dependency>
 
-        <!-- API Testing (RestAssured + JSON Schema Validator) -->
+        <!-- RestAssured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -70,7 +70,7 @@
             <version>5.5.0</version>
         </dependency>
 
-        <!-- JSON Handling -->
+        <!-- JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -82,7 +82,7 @@
             <version>20240303</version>
         </dependency>
 
-        <!-- Data Handling (Excel, IO) -->
+        <!-- Excel -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -99,14 +99,14 @@
             <version>2.19.0</version>
         </dependency>
 
-        <!-- Database (MySQL Connector) -->
+        <!-- MySQL -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>9.1.0</version>
         </dependency>
 
-        <!-- Hamcrest (assertions) -->
+        <!-- Hamcrest -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
@@ -114,7 +114,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Lombok (optional, for cleaner POJOs) -->
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -124,7 +124,8 @@
     </dependencies>
 
     <build>
-        <plugins> <!-- Surefire plugin to run TestNG and generate JUnit-style XML reports -->
+        <plugins>
+            <!-- Surefire plugin to run TestNG and generate JUnit-style XML reports -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -134,9 +135,9 @@
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <useFile>true</useFile>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
