@@ -1,4 +1,3 @@
-/*
 pipeline {
     agent any
 
@@ -9,31 +8,30 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Check Tools') {
             steps {
-                bat 'docker build -t automation-tests .'
+                bat 'java -version'
+                bat 'mvn -version'
             }
         }
 
-        stage('Run Tests in Docker') {
+        stage('Build') {
             steps {
-                // Run Maven tests inside container and mount reports to Jenkins workspace
-                bat 'docker run --rm -v %WORKSPACE%\\target:/app/target automation-tests mvn test -DsuiteXmlFile=testng.xml'
+                bat 'mvn clean install'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                bat 'mvn test -DsuiteXmlFile=testng.xml'
             }
         }
 
         stage('Publish Reports') {
             steps {
-                // If using Maven Surefire plugin (JUnit-style XMLs)
-                junit '**//*
-target/surefire-reports */
-/*.xml'
-
-                // If you want TestNG native reports instead:
-                // 1. Install "TestNG Results Plugin" in Jenkins
-                // 2. Uncomment below:
-                // testng '**//*
-test-output/testng-results.xml'
+                junit '**/target/surefire-reports/*.xml'
+                // If you want TestNG reports, install the plugin and uncomment:
+                // testng '**/test-output/testng-results.xml'
             }
         }
     }
@@ -58,60 +56,3 @@ test-output/testng-results.xml'
         }
     }
 }
- pipeline {
-     agent any
-
-     stages {
-         stage('Checkout') {
-             steps {
-                 git url: 'https://github.com/RS-VIVEK/automation-tests.git', branch: 'main'
-             }
-         }
-
-         stage('Check Tools') {
-             steps {
-                 bat 'java -version'
-                 bat 'mvn -version'
-             }
-         }
-
-         stage('Build') {
-             steps {
-                 bat 'mvn clean install'
-             }
-         }
-
-         stage('Run Tests') {
-             steps {
-                 bat 'mvn test -DsuiteXmlFile=testng.xml'
-             }
-         }
-
-         stage('Publish Reports') {
-             steps {
-                 junit '**/target/surefire-reports/*.xml'
-                 // testng '**/test-output/testng-results.xml'
-             }
-         }
-     }
-
-     post {
-         always {
-             echo "Build finished with status: ${currentBuild.currentResult}"
-         }
-         failure {
-             emailext(
-                 subject: "Automation Tests FAILED (Build #${env.BUILD_NUMBER})",
-                 body: "Check Jenkins logs and reports for details.",
-                 to: "your-team@example.com"
-             )
-         }
-         success {
-             emailext(
-                 subject: "Automation Tests PASSED (Build #${env.BUILD_NUMBER})",
-                 body: "All tests passed successfully.",
-                 to: "your-team@example.com"
-             )
-         }
-     }
- }
