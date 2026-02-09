@@ -30,7 +30,7 @@
             <version>6.1.0</version>
         </dependency>
 
-        <!-- TestNG -->
+        <!-- TestNG (only once, no duplicates) -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -124,7 +124,8 @@
     </dependencies>
 
     <build>
-        <plugins> <!-- Surefire plugin configured for TestNG -->
+        <plugins>
+            <!-- Surefire plugin configured for TestNG -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -135,20 +136,9 @@
                     </suiteXmlFiles>
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                     <useFile>true</useFile>
-                    <testFailureIgnore>false</testFailureIgnore> <!-- Force TestNG to generate JUnit-compatible XML -->
-                    <properties>
-                        <property>
-                            <name>usedefaultlisteners</name>
-                            <value>false</value>
-                        </property>
-                        <property>
-                            <name>listener</name>
-                            <value>org.testng.reporters.XMLReporter</value>
-                        </property>
-                    </properties>
+                    <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
