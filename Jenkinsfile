@@ -27,11 +27,16 @@ pipeline {
             }
         }
 
-       stage('Publish Reports') {
+stage('Publish Reports') {
     steps {
-        junit '**/test-output/testng-results.xml'
+        publishHTML([[
+            reportDir: 'test-output',
+            reportFiles: 'emailable-report.html',
+            reportName: 'TestNG HTML Report'
+        ]])
     }
 }
+
 
     }
 
