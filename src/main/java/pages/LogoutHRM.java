@@ -15,6 +15,7 @@ public class LogoutHRM {
     private By profileTab = By.xpath("//span[@class='oxd-userdropdown-tab']");
     private By logoutBtn = By.xpath("//a[text()='Logout']");
 
+    //constructor
     public LogoutHRM(WebDriver driver, int timeOut) {
         this.driver = driver;
         this.wait = new WaitHelper(driver, timeOut);
