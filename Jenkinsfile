@@ -29,7 +29,7 @@ pipeline {
 
         stage('Publish Reports') {
             steps {
-                junit '**/target/surefire-reports/*.xml'
+                testng '**/test-output/testng-results.xml'
                 // If you want TestNG reports, install the plugin and uncomment:
                 // testng '**/test-output/testng-results.xml'
             }
