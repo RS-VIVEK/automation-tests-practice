@@ -58,57 +58,60 @@ test-output/testng-results.xml'
         }
     }
 }
- */
-pipeline {
-    agent any
+ pipeline {
+     agent any
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/RS-VIVEK/automation-tests.git', branch: 'main'
-            }
-        }
+     stages {
+         stage('Checkout') {
+             steps {
+                 git url: 'https://github.com/RS-VIVEK/automation-tests.git', branch: 'main'
+             }
+         }
 
-        stage('Build') {
-            steps {
-                bat 'mvn clean install'
-            }
-        }
+         stage('Check Tools') {
+             steps {
+                 bat 'java -version'
+                 bat 'mvn -version'
+             }
+         }
 
-        stage('Run Tests') {
-            steps {
-                bat 'mvn test -DsuiteXmlFile=testng.xml'
-            }
-        }
+         stage('Build') {
+             steps {
+                 bat 'mvn clean install'
+             }
+         }
 
-        stage('Publish Reports') {
-            steps {
-                // JUnit-style reports (Surefire plugin)
-                junit '**/target/surefire-reports/*.xml'
+         stage('Run Tests') {
+             steps {
+                 bat 'mvn test -DsuiteXmlFile=testng.xml'
+             }
+         }
 
-                // If using TestNG plugin:
-                // testng '**/test-output/testng-results.xml'
-            }
-        }
-    }
+         stage('Publish Reports') {
+             steps {
+                 junit '**/target/surefire-reports/*.xml'
+                 // testng '**/test-output/testng-results.xml'
+             }
+         }
+     }
 
-    post {
-        always {
-            echo "Build finished with status: ${currentBuild.currentResult}"
-        }
-        failure {
-            emailext(
-                subject: "Automation Tests FAILED (Build #${env.BUILD_NUMBER})",
-                body: "Check Jenkins logs and reports for details.",
-                to: "your-team@example.com"
-            )
-        }
-        success {
-            emailext(
-                subject: "Automation Tests PASSED (Build #${env.BUILD_NUMBER})",
-                body: "All tests passed successfully.",
-                to: "your-team@example.com"
-            )
-        }
-    }
-}
+     post {
+         always {
+             echo "Build finished with status: ${currentBuild.currentResult}"
+         }
+         failure {
+             emailext(
+                 subject: "Automation Tests FAILED (Build #${env.BUILD_NUMBER})",
+                 body: "Check Jenkins logs and reports for details.",
+                 to: "your-team@example.com"
+             )
+         }
+         success {
+             emailext(
+                 subject: "Automation Tests PASSED (Build #${env.BUILD_NUMBER})",
+                 body: "All tests passed successfully.",
+                 to: "your-team@example.com"
+             )
+         }
+     }
+ }
