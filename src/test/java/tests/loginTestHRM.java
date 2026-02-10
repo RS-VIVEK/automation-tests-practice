@@ -6,7 +6,7 @@ import pages.LoginPageHRM;
 
 public class loginTestHRM extends BaseClass {
 
-    //@Test
+    @Test
     public void testValidLogin() {
         LoginPageHRM loginPagehrm = new LoginPageHRM(driver, Integer.parseInt(configReader.getProperty("timeout")));
         loginPagehrm.enterEmail(configReader.getProperty("email"));
