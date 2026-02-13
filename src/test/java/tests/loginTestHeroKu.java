@@ -3,7 +3,6 @@ package tests;
 import base.BaseClassAK;
 import org.testng.annotations.Test;
 import pages.LoginHeroKu;
-
 import java.time.Duration;
 
 public class loginTestHeroKu extends BaseClassAK {
@@ -15,7 +14,7 @@ public class loginTestHeroKu extends BaseClassAK {
         loginHeroKu.enterFirstName(configReader.getProperty("firstname"));
         loginHeroKu.enterLastName(configReader.getProperty("Lastname"));
         loginHeroKu.enterEmailnew(configReader.getProperty("email1"));
-        loginHeroKu.enterNumber(configReader.getProperty("number"));
+       // loginHeroKu.enterNumber(configReader.getProperty("number"));
         loginHeroKu.entercompany(configReader.getProperty("company"));
         loginHeroKu.entercountry(configReader.getProperty("Region"));
         loginHeroKu.sendAMessageToThem(configReader.getProperty("sendmessage"));

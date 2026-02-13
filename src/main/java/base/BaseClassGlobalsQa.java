@@ -1,28 +1,24 @@
 package base;
 
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import util.ConfigReaderHeroKu;
+import util.ConfigReaderGlobalsQA;
 import util.DriverFactory;
-import util.ExtentManager;
 
-
-public class BaseClassAK {
-
+public class BaseClassGlobalsQa {
     protected WebDriver driver;
     private DriverFactory driverFactory;
-    protected ConfigReaderHeroKu configReader;
+    protected ConfigReaderGlobalsQA configReader;
 
     @BeforeMethod
     public void setUp() {
-        configReader = new ConfigReaderHeroKu();
+        configReader = new ConfigReaderGlobalsQA();
         driverFactory = new DriverFactory();
-        driver = driverFactory.initializeDriver(configReader.getProperty("browser1"));
+        driver = driverFactory.initializeDriver(configReader.getProperty("browser2"));
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.get(configReader.getProperty("url1"));
+        driver.get(configReader.getProperty("url3"));
     }
 
     @AfterMethod
@@ -30,9 +26,5 @@ public class BaseClassAK {
         if (driver != null) {
             driver.quit();
         }
-        // ✅ Flush ExtentReports after each test
-        ExtentManager.getInstance().flush();
     }
 }
-
-

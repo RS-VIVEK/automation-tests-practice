@@ -3,12 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import util.JavaScriptUtil;
 import util.WaitHelper;
-
-import java.time.Duration;
 
 public class LoginHeroKu {
 
@@ -17,13 +14,13 @@ public class LoginHeroKu {
     WaitHelper wait;
     JavaScriptUtil jsu;
 
-    private By firstName = By.xpath("//input[@id='input_10_1']");
-    private By lastName = By.xpath("//input[@id='input_10_3']");
-    private By email1 = By.xpath("//input[@id='input_10_10']");
+    private By firstName = By.id("first_name");
+    private By lastName = By.id("last_name");
+    private By email1 = By.id("email");
     private By phoneNumber = By.xpath("//input[@id='input_10_5']");
-    private By company = By.xpath("//input[@id='input_10_6']");
-    private By country = By.xpath("//select[@id='input_10_9']");
-    private By sendAMessage = By.xpath("//textarea[@id='input_10_8']");
+    private By company = By.id("company");
+    private By country = By.id("self_declared_country");
+    private By sendAMessage = By.id("signup-button");
 //    private By sendYourInqBtn = By.xpath("//button[@id='gform_submit_button_10']");
 
     public LoginHeroKu(WebDriver driver1, int timeout) {

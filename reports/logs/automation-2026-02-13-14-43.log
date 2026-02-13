@@ -1,0 +1,24 @@
+2026-02-13 14:43:43 INFO  base.BaseClass - ===== Test Setup Started =====
+2026-02-13 14:43:56 INFO  base.BaseClass - Browser launched: chrome
+2026-02-13 14:43:56 INFO  base.BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-13 14:43:57 INFO  tests.LoginTestHRM - ===== Starting Login Test =====
+2026-02-13 14:43:57 INFO  tests.LoginTestHRM - Entering email: Admin
+2026-02-13 14:44:01 INFO  tests.LoginTestHRM - Entering password
+2026-02-13 14:44:04 INFO  tests.LoginTestHRM - Clicking login button
+2026-02-13 14:44:07 INFO  tests.LoginTestHRM - Login successful, Time At Work verified
+2026-02-13 14:44:08 INFO  tests.LoginTestHRM - ===== Login Test Completed =====
+2026-02-13 14:44:08 INFO  base.BaseClass - ===== Test Teardown Started =====
+2026-02-13 14:44:08 INFO  base.BaseClass - Browser closed successfully
+2026-02-13 14:44:08 INFO  base.BaseClass - Extent Reports flushed
+2026-02-13 14:44:29 INFO  base.BaseClass - ===== Test Setup Started =====
+2026-02-13 14:44:41 INFO  base.BaseClass - Browser launched: chrome
+2026-02-13 14:44:41 INFO  base.BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-13 14:44:41 INFO  tests.LoginTestHRM - ===== Starting Login Test =====
+2026-02-13 14:44:41 INFO  tests.LoginTestHRM - Entering email: Admin
+2026-02-13 14:44:45 INFO  tests.LoginTestHRM - Entering password
+2026-02-13 14:44:48 INFO  tests.LoginTestHRM - Clicking login button
+2026-02-13 14:44:52 INFO  tests.LoginTestHRM - Login successful, Time At Work verified
+2026-02-13 14:44:52 INFO  tests.LoginTestHRM - ===== Login Test Completed =====
+2026-02-13 14:44:52 INFO  base.BaseClass - ===== Test Teardown Started =====
+2026-02-13 14:44:52 INFO  base.BaseClass - Browser closed successfully
+2026-02-13 14:44:52 INFO  base.BaseClass - Extent Reports flushed

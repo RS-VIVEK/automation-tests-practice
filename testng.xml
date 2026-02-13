@@ -8,7 +8,7 @@
                     <include name="testValidLogoutHRM"/>
                 </methods>
             </class>
-            <class name="tests.loginTestHRM">
+            <class name="tests.LoginTestHRM">
                 <methods>
                     <include name="testValidLogin"/>
                 </methods>

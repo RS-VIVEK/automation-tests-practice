@@ -6,20 +6,20 @@
     <groups>
     </groups>
     <test started-at="2025-11-19T10:34:48 IST" name="Default test" finished-at="2025-11-19T10:35:03 IST" duration-ms="14551">
-      <class name="tests.loginTestHRM">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.loginTestHRM@17f9d882]" started-at="2025-11-19T10:34:48 IST" name="setUp" finished-at="2025-11-19T10:34:52 IST" duration-ms="4318" status="PASS">
+      <class name="tests.LoginTestHRM">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTestHRM@17f9d882]" started-at="2025-11-19T10:34:48 IST" name="setUp" finished-at="2025-11-19T10:34:52 IST" duration-ms="4318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidLogin()[pri:0, instance:tests.loginTestHRM@17f9d882]" started-at="2025-11-19T10:34:52 IST" name="testValidLogin" finished-at="2025-11-19T10:35:02 IST" duration-ms="9866" status="PASS">
+        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTestHRM@17f9d882]" started-at="2025-11-19T10:34:52 IST" name="testValidLogin" finished-at="2025-11-19T10:35:02 IST" duration-ms="9866" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.loginTestHRM@17f9d882]" started-at="2025-11-19T10:35:02 IST" name="tearDown" finished-at="2025-11-19T10:35:03 IST" duration-ms="325" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTestHRM@17f9d882]" started-at="2025-11-19T10:35:02 IST" name="tearDown" finished-at="2025-11-19T10:35:03 IST" duration-ms="325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.loginTestHRM -->
+      </class> <!-- tests.LoginTestHRM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
