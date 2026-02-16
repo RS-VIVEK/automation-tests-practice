@@ -1,0 +1,7 @@
+2026-02-16 11:08:00 INFO  LogHelper:13 - Entering password
+2026-02-16 11:08:03 INFO  LogHelper:13 - Clicking login button
+2026-02-16 11:08:07 INFO  LogHelper:13 - Login successful, Time At Work verified
+2026-02-16 11:08:09 INFO  LogHelper:13 - ===== Login Test Completed =====
+2026-02-16 11:08:09 INFO  BaseClass:43 - ===== Test Teardown Started =====
+2026-02-16 11:08:10 INFO  BaseClass:47 - Browser closed successfully
+2026-02-16 11:08:11 INFO  BaseClass:53 - Extent Reports flushed

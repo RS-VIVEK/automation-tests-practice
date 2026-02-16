@@ -1,0 +1,9 @@
+2026-02-16 11:02:41 INFO  BaseClass:23 - ===== Test Setup Started =====
+2026-02-16 11:02:49 INFO  BaseClass:36 - Browser launched: chrome
+2026-02-16 11:02:49 INFO  BaseClass:37 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-16 11:02:49 INFO  LogHelper:13 - ===== Starting Login Test =====
+2026-02-16 11:02:49 INFO  LogHelper:13 - Entering email: Admin
+2026-02-16 11:02:53 INFO  LogHelper:13 - Entering password
+2026-02-16 11:02:56 INFO  LogHelper:13 - Clicking login button
+2026-02-16 11:02:59 INFO  LogHelper:13 - Login successful, Time At Work verified
+2026-02-16 11:02:59 INFO  LogHelper:13 - ===== Login Test Completed =====

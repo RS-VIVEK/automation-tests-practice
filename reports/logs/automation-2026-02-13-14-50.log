@@ -1,0 +1,5 @@
+2026-02-13 14:50:03 INFO  BaseClass:36 - Browser launched: chrome
+2026-02-13 14:50:03 INFO  BaseClass:37 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-13 14:50:44 INFO  BaseClass:43 - ===== Test Teardown Started =====
+2026-02-13 14:50:44 INFO  BaseClass:47 - Browser closed successfully
+2026-02-13 14:50:45 INFO  BaseClass:53 - Extent Reports flushed
