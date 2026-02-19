@@ -31,10 +31,39 @@ pipeline {
             }
         }
     }
-
     post {
         always {
-            echo "Pipeline finished with status: ${currentBuild.currentResult}"
-        }
-    }
+            // Publish Allure report after every build
+            allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+            }
+            success {
+            // Send email if build succeeds
+            emailext (
+                to: 'vivek@example.com',
+                subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """Hello Vivek,
+
+    The build ${env.BUILD_NUMBER} for job ${env.JOB_NAME} finished successfully.
+    You can view the Allure report here: ${env.BUILD_URL}allure
+
+    Regards,
+    Jenkins"""
+                )
+               {
+               failure {
+                    // Send email if build fails
+                    emailext (
+                        to: 'vivekvivekvivekrs@gmail.com',
+                        subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                        body: """Hello Vivek,
+
+    The build ${env.BUILD_NUMBER} for job ${env.JOB_NAME} has FAILED.
+
+    You can view the Allure report here: ${env.BUILD_URL}allure
+
+    Regards,
+    Jenkins"""
+               )
+          }
+     }
 }
