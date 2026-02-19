@@ -35,7 +35,7 @@ pipeline {
     post {
         always {
             // Publish Allure report after every build
-          //  allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+            allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
         }
         success {
             // Send email if build succeeds
