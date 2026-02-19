@@ -20,7 +20,7 @@ public class BaseClassAK {
 
     @BeforeMethod
     public void setUp(Method method) {
-        logger.info("========= Test Setup Started =========");
+        logger.info("======== Test Setup Started ========");
 
         configReader = new ConfigReaderHeroKu();
         driverFactory = new DriverFactory();
