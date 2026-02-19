@@ -16,7 +16,7 @@ public class LogoutTestHRM extends BaseClass {
         LogHelper.info("Entering email");
         logoutHRM.enterEmail(configReader.getProperty("email"));
 
-        LogHelper.info("Entering password");
+        LogHelper.info("Entering password.");
         logoutHRM.enterPassword(configReader.getProperty("password"));
 
         LogHelper.info("Clicking login button");
