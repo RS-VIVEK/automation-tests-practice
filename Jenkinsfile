@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-        stage('Publish Reports') {
+       /* stage('Publish Reports') {
             steps {
                 // Publish Allure results from target/allure-results
                 allure([
@@ -29,7 +29,7 @@ pipeline {
                     results: [[path: 'target/allure-results']]
                 ])
             }
-        }
+        }*/
     }
 
     post {
