@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-       /* stage('Publish Reports') {
+        stage('Publish Reports') {
             steps {
                 // Publish Allure results from target/allure-results
                 allure([
@@ -29,13 +29,13 @@ pipeline {
                     results: [[path: 'target/allure-results']]
                 ])
             }
-        }*/
+        }
     }
 
     post {
         always {
             // Publish Allure report after every build
-            allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+          //  allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
         }
         success {
             // Send email if build succeeds
