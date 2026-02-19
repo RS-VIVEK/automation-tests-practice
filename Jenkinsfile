@@ -62,7 +62,8 @@ pipeline {
     You can view the Allure report here: ${env.BUILD_URL}allure
 
     Regards,
-    Jenkins"""
+    Jenkins""",
+                   attachmentsPattern: "target/allure-results/**"
                )
           }
      }
