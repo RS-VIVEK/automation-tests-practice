@@ -9,7 +9,7 @@ public class LogoutTestHRM extends BaseClass {
 
     @Test(description = "Valid logout from HRM application")
     public void testValidLogoutHRM() {
-        LogHelper.info("===== Starting Logout Test =====");
+        LogHelper.info("====== Starting Logout Test ======");
 
         LogoutHRM logoutHRM = new LogoutHRM(driver, Integer.parseInt(configReader.getProperty("timeout")));
 

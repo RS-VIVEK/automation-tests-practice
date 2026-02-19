@@ -15,7 +15,7 @@ import java.time.Duration;
 public class LoginTestHRM extends BaseClass {
     @Test
     public void testValidLogin() {
-        LogHelper.info("===== Starting Login Test =====");
+        LogHelper.info("====== Starting Login Test =======");
 
         LoginPageHRM loginPagehrm = new LoginPageHRM(driver, Integer.parseInt(configReader.getProperty("timeout")));
         LogHelper.info("Entering email") ;
