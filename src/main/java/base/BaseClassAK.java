@@ -24,7 +24,7 @@ public class BaseClassAK {
 
         configReader = new ConfigReaderHeroKu();
         driverFactory = new DriverFactory();
-        driver = driverFactory.initializeDriver(configReader.getProperty("browser1"));
+        driver = driverFactory.initializeDriver(configReader.getProperty("browser"));
 
         //Save Driver in DiverManager
         DriverManager.setDriver(driver);

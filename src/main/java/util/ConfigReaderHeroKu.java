@@ -9,7 +9,7 @@ public class ConfigReaderHeroKu {
 
     public ConfigReaderHeroKu() {
         try {
-            FileInputStream fis = new FileInputStream("src/test/resources/config1.properties");
+            FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
             properties = new Properties();
             properties.load(fis);
         } catch (IOException e) {

@@ -1,0 +1,7 @@
+2026-02-20 12:48:36 INFO  BaseClassAK:23 - ======== Test Setup Started ========
+2026-02-20 12:48:41 INFO  BaseClassAK:40 - Browser launched: null
+2026-02-20 12:48:41 INFO  BaseClassAK:41 - Navigated to URL: https://signup.heroku.com/login
+2026-02-20 12:48:41 INFO  BaseClassAK:42 - ExtentTest create for: TestLogin
+2026-02-20 12:48:41 INFO  BaseClassAK:47 - ===== Teardown Started =====
+2026-02-20 12:48:41 INFO  BaseClassAK:51 - Browser closed successfully
+2026-02-20 12:48:41 INFO  BaseClassAK:58 - Extent Reports flushed

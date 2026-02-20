@@ -27,7 +27,6 @@ public class DriverFactory {
                     break;
                 case "edge":
                     WebDriverManager.edgedriver().setup();
-                    System.setProperty("webdriver.edge.driver", "C:/Users/rsvis/Downloads/edgedriver_win64 (1)/msedgedriver.exe");
                     driver = new EdgeDriver();
                     break;
                 default:

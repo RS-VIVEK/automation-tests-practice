@@ -1,0 +1,34 @@
+2026-02-20 11:43:03 INFO  BaseClass:45 - Browser launched: chrome
+2026-02-20 11:43:03 INFO  BaseClass:46 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-20 11:43:03 INFO  BaseClass:47 - ExtentTest created for: testValidLogin
+2026-02-20 11:43:03 INFO  LogHelper:13 - ===== Starting Login Test ======
+2026-02-20 11:43:03 INFO  LogHelper:13 - Entering email
+2026-02-20 11:43:07 INFO  LogHelper:13 - Entering password
+2026-02-20 11:43:10 INFO  LogHelper:13 - Clicking login button
+2026-02-20 11:43:13 INFO  LogHelper:13 - Login successful, Time At Work verified
+2026-02-20 11:43:13 INFO  LogHelper:13 - ===== Login Test Completed =====
+2026-02-20 11:43:13 INFO  BaseClass:53 - ===== Test Teardown Started =====
+2026-02-20 11:43:13 INFO  BaseClass:57 - Browser closed successfully
+2026-02-20 11:43:14 INFO  BaseClass:63 - Extent Reports flushed
+2026-02-20 11:43:14 INFO  BaseClass:25 - ===== Test Setup Started =====
+2026-02-20 11:43:20 INFO  BaseClass:45 - Browser launched: chrome
+2026-02-20 11:43:20 INFO  BaseClass:46 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-20 11:43:20 INFO  BaseClass:47 - ExtentTest created for: testValidLogoutHRM
+2026-02-20 11:43:20 INFO  LogHelper:13 - ====== Starting Logout Test ======
+2026-02-20 11:43:20 INFO  LogHelper:13 - Entering email
+2026-02-20 11:43:24 INFO  LogHelper:13 - Entering password.
+2026-02-20 11:43:27 INFO  LogHelper:13 - Clicking login button
+2026-02-20 11:43:30 INFO  LogHelper:13 - Clicking profile tab
+2026-02-20 11:43:33 INFO  LogHelper:13 - Clicking signout tab
+2026-02-20 11:43:37 INFO  LogHelper:13 - Logout successful, user signed out
+2026-02-20 11:43:37 INFO  LogHelper:13 - ===== Logout Test Completed =====
+2026-02-20 11:43:37 INFO  BaseClass:53 - ===== Test Teardown Started =====
+2026-02-20 11:43:37 INFO  BaseClass:57 - Browser closed successfully
+2026-02-20 11:43:37 INFO  BaseClass:63 - Extent Reports flushed
+2026-02-20 11:43:37 INFO  BaseClassAK:23 - ======== Test Setup Started ========
+2026-02-20 11:43:41 INFO  BaseClassAK:40 - Browser launched: chrome
+2026-02-20 11:43:41 INFO  BaseClassAK:41 - Navigated to URL: https://signup.heroku.com/login
+2026-02-20 11:43:41 INFO  BaseClassAK:42 - ExtentTest create for: TestLogin
+2026-02-20 11:43:43 INFO  BaseClassAK:47 - ===== Teardown Started =====
+2026-02-20 11:43:44 INFO  BaseClassAK:51 - Browser closed successfully
+2026-02-20 11:43:44 INFO  BaseClassAK:58 - Extent Reports flushed

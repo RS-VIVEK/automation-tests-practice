@@ -1,0 +1,21 @@
+2026-02-20 12:47:06 INFO  BaseClass:41 - Browser launched: chrome
+2026-02-20 12:47:06 INFO  BaseClass:42 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-20 12:47:06 INFO  BaseClass:43 - ExtentTest created for: testValidLogoutHRM
+2026-02-20 12:47:06 INFO  LogHelper:13 - ====== Starting Logout Test ======
+2026-02-20 12:47:06 INFO  LogHelper:13 - Entering email
+2026-02-20 12:47:11 INFO  LogHelper:13 - Entering password.
+2026-02-20 12:47:14 INFO  LogHelper:13 - Clicking login button
+2026-02-20 12:47:17 INFO  LogHelper:13 - Clicking profile tab
+2026-02-20 12:47:23 INFO  LogHelper:13 - Clicking signout tab
+2026-02-20 12:47:27 INFO  LogHelper:13 - Logout successful, user signed out
+2026-02-20 12:47:27 INFO  LogHelper:13 - ===== Logout Test Completed =====
+2026-02-20 12:47:27 INFO  BaseClass:49 - ===== Test Teardown Started =====
+2026-02-20 12:47:27 INFO  BaseClass:53 - Browser closed successfully
+2026-02-20 12:47:27 INFO  BaseClass:59 - Extent Reports flushed
+2026-02-20 12:47:27 INFO  BaseClassAK:23 - ======== Test Setup Started ========
+2026-02-20 12:47:31 INFO  BaseClassAK:40 - Browser launched: null
+2026-02-20 12:47:31 INFO  BaseClassAK:41 - Navigated to URL: https://signup.heroku.com/login
+2026-02-20 12:47:31 INFO  BaseClassAK:42 - ExtentTest create for: TestLogin
+2026-02-20 12:47:31 INFO  BaseClassAK:47 - ===== Teardown Started =====
+2026-02-20 12:47:31 INFO  BaseClassAK:51 - Browser closed successfully
+2026-02-20 12:47:31 INFO  BaseClassAK:58 - Extent Reports flushed

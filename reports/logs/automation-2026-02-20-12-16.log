@@ -1,0 +1,16 @@
+2026-02-20 12:16:02 INFO  LogHelper:13 - Entering password.
+2026-02-20 12:16:06 INFO  LogHelper:13 - Clicking login button
+2026-02-20 12:16:09 INFO  LogHelper:13 - Clicking profile tab
+2026-02-20 12:16:12 INFO  LogHelper:13 - Clicking signout tab
+2026-02-20 12:16:16 INFO  LogHelper:13 - Logout successful, user signed out
+2026-02-20 12:16:16 INFO  LogHelper:13 - ===== Logout Test Completed =====
+2026-02-20 12:16:16 INFO  BaseClass:57 - ===== Test Teardown Started =====
+2026-02-20 12:16:16 INFO  BaseClass:61 - Browser closed successfully
+2026-02-20 12:16:16 INFO  BaseClass:67 - Extent Reports flushed
+2026-02-20 12:16:16 INFO  BaseClass:24 - ===== Test Setup Started =====
+2026-02-20 12:16:24 INFO  BaseClass:49 - Browser launched: chrome
+2026-02-20 12:16:24 INFO  BaseClass:50 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-20 12:16:24 INFO  BaseClass:51 - ExtentTest created for: TestLogin
+2026-02-20 12:16:29 INFO  BaseClass:57 - ===== Test Teardown Started =====
+2026-02-20 12:16:30 INFO  BaseClass:61 - Browser closed successfully
+2026-02-20 12:16:30 INFO  BaseClass:67 - Extent Reports flushed

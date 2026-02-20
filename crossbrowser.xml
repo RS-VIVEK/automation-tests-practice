@@ -1,0 +1,41 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<!--<suite name="CrossBrowserSuite" parallel="tests" thread-count="3">-->
+
+<!--    &lt;!&ndash; Chrome HRM + HeroKu &ndash;&gt;-->
+<!--    <test name="ChromeSuite">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="appUrl" value="url"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTestHRM"/>-->
+<!--            <class name="tests.LogoutTestHRM"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ChromeHeroKu">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="appUrl" value="url1"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.loginTestHeroKu"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    &lt;!&ndash; Firefox HRM + HeroKu &ndash;&gt;-->
+<!--    <test name="FirefoxSuite">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <parameter name="appUrl" value="url"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTestHRM"/>-->
+<!--            <class name="tests.LogoutTestHRM"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="FirefoxHeroKu">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <parameter name="appUrl" value="url1"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.loginTestHeroKu"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--</suite>-->
