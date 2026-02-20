@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/rsvis/IdeaProjects/AutomationTestSelenium/src/test/java/tests">
+
+<suite name="Automation Test Suite" verbose="2" parallel="false" preserve-order="true">
+
+<!--     Register listeners globally -->
+<!--    <listeners>-->
+<!--        <listener class-name="listeners.ScreenshotListener"/>-->
+<!--    </listeners>-->
+
+    <!-- Define a test group -->
+    <test name="HRM and HeroKu Tests">
         <classes>
+            <!-- HRM Login Test -->
             <class name="tests.LoginTestHRM">
                 <methods>
                     <include name="testValidLogin"/>
                 </methods>
             </class>
+
+            <!-- HRM Logout Test -->
             <class name="tests.LogoutTestHRM">
                 <methods>
                     <include name="testValidLogoutHRM"/>
                 </methods>
             </class>
+
+            <!-- HeroKu Login Test -->
             <class name="tests.loginTestHeroKu">
                 <methods>
                     <include name="TestLogin"/>

@@ -1,0 +1,13 @@
+2026-02-20 13:15:01 INFO  LogHelper:13 - Clicking signout tab
+2026-02-20 13:15:06 INFO  LogHelper:13 - Logout successful, user signed out
+2026-02-20 13:15:06 INFO  LogHelper:13 - ===== Logout Test Completed =====
+2026-02-20 13:15:06 INFO  BaseClass:49 - ===== Test Teardown Started =====
+2026-02-20 13:15:06 INFO  BaseClass:53 - Browser closed successfully
+2026-02-20 13:15:06 INFO  BaseClass:59 - Extent Reports flushed
+2026-02-20 13:15:06 INFO  BaseClassAK:23 - ======== Test Setup Started ========
+2026-02-20 13:15:09 INFO  BaseClassAK:40 - Browser launched: null
+2026-02-20 13:15:09 INFO  BaseClassAK:41 - Navigated to URL: https://signup.heroku.com/login
+2026-02-20 13:15:09 INFO  BaseClassAK:42 - ExtentTest create for: TestLogin
+2026-02-20 13:15:12 INFO  BaseClassAK:47 - ===== Teardown Started =====
+2026-02-20 13:15:12 INFO  BaseClassAK:51 - Browser closed successfully
+2026-02-20 13:15:12 INFO  BaseClassAK:58 - Extent Reports flushed

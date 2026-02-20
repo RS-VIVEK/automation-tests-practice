@@ -3,14 +3,12 @@ package base;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
+import org.testng.annotations.*;
 import util.*;
 
 import java.lang.reflect.Method;
 
-
+@Listeners({listeners.ScreenshotListener.class})
 public class BaseClass {
 
     private static final Logger logger = LogManager.getLogger(BaseClass.class);
@@ -18,7 +16,6 @@ public class BaseClass {
     private DriverFactory driverFactory;
     protected ConfigReader configReader;
 
-    //@Parameters("browser")
     @BeforeMethod
     public void setUp(@Optional("") String browser, Method method) {
         logger.info("===== Test Setup Started =====");
@@ -27,21 +24,18 @@ public class BaseClass {
         driverFactory = new DriverFactory();
         driver = driverFactory.initializeDriver(configReader.getProperty("browser"));
 
-        // Save driver in DriverManager
         DriverManager.setDriver(driver);
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.get(configReader.getProperty("url"));
 
-        // ✅ Create ExtentTest automatically using test method name
         String testName = method.getName();
         ExtentTestManager.createTest(testName);
 
         logger.info("Browser launched: " + configReader.getProperty("browser"));
         logger.info("Navigated to URL: " + configReader.getProperty("url"));
         logger.info("ExtentTest created for: " + testName);
-
     }
 
     @AfterMethod
@@ -54,10 +48,15 @@ public class BaseClass {
             } catch (Exception e) {
                 logger.error("Browser did not close properly", e);
             } finally {
-                // ✅ Flush ExtentReports after each test
-                ExtentManager.getInstance().flush();
-                logger.info("Extent Reports flushed");
+                DriverManager.unload();
+                ExtentTestManager.unload();
             }
         }
+    }
+
+    @AfterSuite
+    public void tearDownSuite() {
+        ExtentManager.getInstance().flush();
+        logger.info("Extent Reports flushed");
     }
 }

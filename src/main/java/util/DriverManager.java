@@ -13,4 +13,7 @@ public class DriverManager {
     public static void setDriver(WebDriver driverInstance) {
         driver.set(driverInstance);
     }
+
+    public static void unload() { driver.remove(); }
+
 }

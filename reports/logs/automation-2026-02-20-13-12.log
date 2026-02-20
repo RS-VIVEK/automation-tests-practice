@@ -1,0 +1,6 @@
+2026-02-20 13:12:06 INFO  LogHelper:13 - Clicking signout tab
+2026-02-20 13:12:13 INFO  LogHelper:13 - Logout successful, user signed out
+2026-02-20 13:12:13 INFO  LogHelper:13 - ===== Logout Test Completed =====
+2026-02-20 13:12:13 INFO  BaseClass:49 - ===== Test Teardown Started =====
+2026-02-20 13:12:14 INFO  BaseClass:53 - Browser closed successfully
+2026-02-20 13:12:14 INFO  BaseClass:59 - Extent Reports flushed

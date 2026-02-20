@@ -9,55 +9,44 @@ import util.DriverManager;
 import util.ExtentTestManager;
 import util.ScreenshotUtil;
 
-import java.io.File;
-
 public class ScreenshotListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        String testName = result.getName();
-        WebDriver driver = DriverManager.getDriver();
-        String screenshotPath = ScreenshotUtil.captureScreenshot(driver, testName);
-        if (screenshotPath != null) {
-            String relativePath = "screenshots/" + new File(screenshotPath).getName();
-            ExtentTest test = ExtentTestManager.getTest();
-            if (test != null) {
-                test.fail("Test Failed: " + testName, MediaEntityBuilder.createScreenCaptureFromPath(relativePath).build());
-            }
-        } else {
-            System.out.println("⚠️ Screenshot capture failed for test: " + testName);
-        }
+        capture(result, "fail");
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        String testName = result.getName();
-        WebDriver driver = DriverManager.getDriver();
-        String screenshotPath = ScreenshotUtil.captureScreenshot(driver, testName);
-        if (screenshotPath != null) {
-            String relativePath = "screenshots/" + new File(screenshotPath).getName();
-            ExtentTest test = ExtentTestManager.getTest();
-            if (test != null) {
-                test.pass("Test Passed: " + testName, MediaEntityBuilder.createScreenCaptureFromPath(relativePath).build());
-            }
-        } else {
-            System.out.println("⚠️ Screenshot capture failed for test: " + testName);
-        }
+        capture(result, "pass");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
+        capture(result, "skip");
+    }
+
+    private void capture(ITestResult result, String status) {
         String testName = result.getName();
         WebDriver driver = DriverManager.getDriver();
         String screenshotPath = ScreenshotUtil.captureScreenshot(driver, testName);
-        if (screenshotPath != null) {
-            String relativePath = "screenshots/" + new File(screenshotPath).getName();
-            ExtentTest test = ExtentTestManager.getTest();
-            if (test != null) {
-                test.skip("Test Skipped: " + testName, MediaEntityBuilder.createScreenCaptureFromPath(relativePath).build());
+        ExtentTest test = ExtentTestManager.getTest();
+
+        if (test != null && screenshotPath != null) {
+            switch (status) {
+                case "fail":
+                    test.fail("Test Failed: " + testName,
+                            MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+                    break;
+                case "pass":
+                    test.pass("Test Passed: " + testName,
+                            MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+                    break;
+                case "skip":
+                    test.skip("Test Skipped: " + testName,
+                            MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+                    break;
             }
-        } else {
-            System.out.println("⚠️ Screenshot capture failed for test: " + testName);
         }
     }
 }

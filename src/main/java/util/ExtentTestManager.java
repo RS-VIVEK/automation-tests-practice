@@ -20,4 +20,8 @@ public class ExtentTestManager {
         setTest(test);
         return test;
     }
+    public static synchronized void unload() {
+        extentTest.remove();
+    }
+
 }
