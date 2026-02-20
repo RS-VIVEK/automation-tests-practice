@@ -18,7 +18,7 @@ public class BaseClass {
 
     @BeforeMethod
     public void setUp(@Optional("") String browser, Method method) {
-        logger.info("===== Test Setup Started =====");
+        logger.info("====== Test Setup Started =====");
 
         configReader = new ConfigReader();
         driverFactory = new DriverFactory();
