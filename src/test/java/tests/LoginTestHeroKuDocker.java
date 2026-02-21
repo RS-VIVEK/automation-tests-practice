@@ -1,17 +1,17 @@
 package tests;
 
-import base.BaseClassAK;
+import base.DockerBaseClass;
 import org.testng.annotations.Test;
 import pages.LoginHeroKu;
 import util.LogHelper;
 
 import java.time.Duration;
 
-public class loginTestHeroKu extends BaseClassAK {
+public class LoginTestHeroKuDocker extends DockerBaseClass {
 
     @Test
     public void TestLogin() {
-        LogHelper.info("===== Starting Login Test =====");
+        LogHelper.info("===== Starting Docker Login Test =====");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         LoginHeroKu loginHeroKu = new LoginHeroKu(driver, Integer.parseInt(configReader.getProperty("timeout")));
         LogHelper.info("Entering first name");
@@ -20,15 +20,13 @@ public class loginTestHeroKu extends BaseClassAK {
         loginHeroKu.enterLastName(configReader.getProperty("lastname"));
         LogHelper.info("Entering email address");
         loginHeroKu.enterEmailnew(configReader.getProperty("email1"));
-       // loginHeroKu.enterNumber(configReader.getProperty("number"));
+        // loginHeroKu.enterNumber(configReader.getProperty("number"));
         LogHelper.info("Entering company");
         loginHeroKu.entercompany(configReader.getProperty("company"));
         LogHelper.info("Entering region");
         loginHeroKu.entercountry(configReader.getProperty("region"));
         loginHeroKu.sendAMessageToThem(configReader.getProperty("sendmessage"));
         LogHelper.info("Signup successful");
-        LogHelper.info("===== Login Test Completed =====");
-
-
+        LogHelper.info("===== Login Test Completed (Docker Grid) =====");
     }
 }

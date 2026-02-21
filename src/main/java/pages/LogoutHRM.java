@@ -13,7 +13,7 @@ public class LogoutHRM {
     private By passField = By.xpath("//input[@name ='password']");
     private By loginBtn = By.xpath("//button[text()=' Login ']");
     private By profileTab = By.xpath("//span[@class='oxd-userdropdown-tab']");
-    private By logoutBtn = By.xpath("//a[text()='Logout']");
+    private By logoutBtn = By.xpath("//a[text()='Logou']");
 
     //constructor
     public LogoutHRM(WebDriver driver, int timeOut) {

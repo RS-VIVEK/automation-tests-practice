@@ -1,0 +1,46 @@
+2026-02-21 22:15:15 INFO  BaseClassAK:23 - ======== Test Setup Started ========
+2026-02-21 22:15:15 INFO  BaseClass:21 - ===== Test Setup Started =====
+2026-02-21 22:15:15 INFO  BaseClass:21 - ===== Test Setup Started =====
+2026-02-21 22:15:21 INFO  BaseClassAK:40 - Browser launched: null
+2026-02-21 22:15:21 INFO  BaseClassAK:41 - Navigated to URL: https://signup.heroku.com/login
+2026-02-21 22:15:21 INFO  BaseClassAK:42 - ExtentTest create for: TestLogin
+2026-02-21 22:15:21 INFO  LogHelper:13 - ===== Starting Login Test =====
+2026-02-21 22:15:21 INFO  LogHelper:13 - Entering first name
+2026-02-21 22:15:21 INFO  LogHelper:13 - Entering Last name
+2026-02-21 22:15:21 INFO  LogHelper:13 - Entering email address
+2026-02-21 22:15:21 INFO  LogHelper:13 - Entering company
+2026-02-21 22:15:22 INFO  LogHelper:13 - Entering region
+2026-02-21 22:15:22 INFO  BaseClass:36 - Browser launched: chrome
+2026-02-21 22:15:22 INFO  BaseClass:37 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-21 22:15:22 INFO  BaseClass:38 - ExtentTest created for: testValidLogoutHRM
+2026-02-21 22:15:22 INFO  LogHelper:13 - ====== Starting Logout Test ======
+2026-02-21 22:15:22 INFO  LogHelper:13 - Entering email
+2026-02-21 22:15:24 INFO  LogHelper:13 - Signup successful
+2026-02-21 22:15:24 INFO  LogHelper:13 - ===== Login Test Completed =====
+2026-02-21 22:15:24 INFO  BaseClassAK:47 - ===== Teardown Started =====
+2026-02-21 22:15:24 INFO  BaseClassAK:51 - Browser closed successfully
+2026-02-21 22:15:24 INFO  BaseClass:36 - Browser launched: chrome
+2026-02-21 22:15:24 INFO  BaseClass:37 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-21 22:15:24 INFO  BaseClass:38 - ExtentTest created for: testValidLogin
+2026-02-21 22:15:24 INFO  LogHelper:13 - ===== Starting Login Test ======
+2026-02-21 22:15:24 INFO  LogHelper:13 - Entering email
+2026-02-21 22:15:25 INFO  BaseClassAK:58 - Extent Reports flushed
+2026-02-21 22:15:26 INFO  LogHelper:13 - Entering password.
+2026-02-21 22:15:28 INFO  LogHelper:13 - Entering password
+2026-02-21 22:15:29 INFO  LogHelper:13 - Clicking login button
+2026-02-21 22:15:32 INFO  LogHelper:13 - Clicking login button
+2026-02-21 22:15:32 INFO  LogHelper:13 - Clicking profile tab
+2026-02-21 22:15:35 INFO  LogHelper:13 - Login successful, Time At Work verified
+2026-02-21 22:15:35 INFO  LogHelper:13 - ===== Login Test Completed =====
+2026-02-21 22:15:35 INFO  BaseClass:43 - ===== Test Teardown Started =====
+2026-02-21 22:15:35 INFO  BaseClass:47 - Browser closed successfully
+2026-02-21 22:15:36 INFO  LogHelper:13 - Clicking signout tab
+2026-02-21 22:15:46 INFO  BaseClass:43 - ===== Test Teardown Started =====
+2026-02-21 22:15:46 INFO  BaseClass:47 - Browser closed successfully
+2026-02-21 22:15:46 INFO  BaseClass:21 - ===== Test Setup Started =====
+2026-02-21 22:15:52 INFO  BaseClass:36 - Browser launched: chrome
+2026-02-21 22:15:52 INFO  BaseClass:37 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-02-21 22:15:52 INFO  BaseClass:38 - ExtentTest created for: testValidLogoutHRM
+2026-02-21 22:15:52 INFO  LogHelper:13 - ====== Starting Logout Test ======
+2026-02-21 22:15:52 INFO  LogHelper:13 - Entering email
+2026-02-21 22:15:57 INFO  LogHelper:13 - Entering password.

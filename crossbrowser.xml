@@ -16,7 +16,7 @@
 <!--        <parameter name="browser" value="chrome"/>-->
 <!--        <parameter name="appUrl" value="url1"/>-->
 <!--        <classes>-->
-<!--            <class name="tests.loginTestHeroKu"/>-->
+<!--            <class name="tests.LoginTestHeroKu"/>-->
 <!--        </classes>-->
 <!--    </test>-->
 
@@ -34,7 +34,7 @@
 <!--        <parameter name="browser" value="firefox"/>-->
 <!--        <parameter name="appUrl" value="url1"/>-->
 <!--        <classes>-->
-<!--            <class name="tests.loginTestHeroKu"/>-->
+<!--            <class name="tests.LoginTestHeroKu"/>-->
 <!--        </classes>-->
 <!--    </test>-->
 

@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="DockerSuite" parallel="tests" thread-count="2">
+
+    <!--Register listeners globally -->
+
+    <listeners>
+        <listener class-name="listeners.ScreenshotListener"/>
+        <listener class-name="listeners.RetryListener"/>
+    </listeners>
+
+    <test name="ChromeTests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.LoginTestHRMDocker"/>
+            <class name="tests.LogoutTestHRMDocker"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTests">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.LoginTestHRMDocker"/>
+            <class name="tests.LogoutTestHRMDocker"/>
+        </classes>
+    </test>
+</suite>

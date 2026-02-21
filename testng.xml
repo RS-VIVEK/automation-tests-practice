@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Automation Test Suite" verbose="2" parallel="false" preserve-order="true">
+<suite name="Automation Test Suite" verbose="2" parallel="true" preserve-order="true">
 
-<!--     Register listeners globally -->
-<!--    <listeners>-->
-<!--        <listener class-name="listeners.ScreenshotListener"/>-->
-<!--    </listeners>-->
+    <!--Register listeners globally -->
+
+    <listeners>
+        <listener class-name="listeners.ScreenshotListener"/>
+        <listener class-name="listeners.RetryListener"/>
+    </listeners>
 
     <!-- Define a test group -->
     <test name="HRM and HeroKu Tests">
@@ -26,7 +28,7 @@
             </class>
 
             <!-- HeroKu Login Test -->
-            <class name="tests.loginTestHeroKu">
+            <class name="tests.LoginTestHeroKu">
                 <methods>
                     <include name="TestLogin"/>
                 </methods>

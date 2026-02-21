@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+  selenium-hub:
+    image: selenium/hub:4.20.0
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"   # Grid Hub UI/API
+
+  chrome:
+    image: selenium/node-chrome:4.20.0
+    container_name: selenium-chrome
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "7900:7900"   # expose VNC/noVNC for Chrome
+
+  firefox:
+    image: selenium/node-firefox:4.20.0
+    container_name: selenium-firefox
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "7901:7900"   # expose VNC/noVNC for Firefox
+
+  tests:
+    build: .
+    container_name: selenium-tests
+    depends_on:
+      - selenium-hub
+      - chrome
+      - firefox
+    command: mvn test -DsuiteXmlFile=testng-docker.xml
+    environment:
+      - HUB_HOST=selenium-hub   # 👈 this tells your factory to use the hub container
+    volumes:
+      - ./target:/usr/src/app/target
