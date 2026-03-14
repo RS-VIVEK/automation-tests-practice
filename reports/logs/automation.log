@@ -1,18 +1,15 @@
-2026-02-21 22:16:00 INFO  LogHelper:13 - Clicking login button
-2026-02-21 22:16:03 INFO  LogHelper:13 - Clicking profile tab
-2026-02-21 22:16:06 INFO  LogHelper:13 - Clicking signout tab
-2026-02-21 22:16:17 INFO  BaseClass:43 - ===== Test Teardown Started =====
-2026-02-21 22:16:17 INFO  BaseClass:47 - Browser closed successfully
-2026-02-21 22:16:17 INFO  BaseClass:21 - ===== Test Setup Started =====
-2026-02-21 22:16:28 INFO  BaseClass:36 - Browser launched: chrome
-2026-02-21 22:16:28 INFO  BaseClass:37 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-2026-02-21 22:16:28 INFO  BaseClass:38 - ExtentTest created for: testValidLogoutHRM
-2026-02-21 22:16:28 INFO  LogHelper:13 - ====== Starting Logout Test ======
-2026-02-21 22:16:28 INFO  LogHelper:13 - Entering email
-2026-02-21 22:16:32 INFO  LogHelper:13 - Entering password.
-2026-02-21 22:16:35 INFO  LogHelper:13 - Clicking login button
-2026-02-21 22:16:38 INFO  LogHelper:13 - Clicking profile tab
-2026-02-21 22:16:42 INFO  LogHelper:13 - Clicking signout tab
-2026-02-21 22:16:53 INFO  BaseClass:43 - ===== Test Teardown Started =====
-2026-02-21 22:16:53 INFO  BaseClass:47 - Browser closed successfully
-2026-02-21 22:16:53 INFO  BaseClass:60 - Extent Reports flushed
+2026-03-14 21:18:05 INFO  BaseClass:21 - ===== Test Setup Started =====
+2026-03-14 21:18:20 INFO  BaseClass:36 - Browser launched: chrome
+2026-03-14 21:18:20 INFO  BaseClass:37 - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-03-14 21:18:20 INFO  BaseClass:38 - ExtentTest created for: testValidLogoutHRM
+2026-03-14 21:18:21 INFO  LogHelper:13 - ====== Starting Logout Test ======
+2026-03-14 21:18:21 INFO  LogHelper:13 - Entering email
+2026-03-14 21:18:24 INFO  LogHelper:13 - Entering password.
+2026-03-14 21:18:28 INFO  LogHelper:13 - Clicking login button
+2026-03-14 21:18:33 INFO  LogHelper:13 - Clicking profile tab
+2026-03-14 21:18:36 INFO  LogHelper:13 - Clicking signout tab
+2026-03-14 21:18:40 INFO  LogHelper:13 - Logout successful, user signed out
+2026-03-14 21:18:40 INFO  LogHelper:13 - ===== Logout Test Completed =====
+2026-03-14 21:18:41 INFO  BaseClass:43 - ===== Test Teardown Started =====
+2026-03-14 21:18:41 INFO  BaseClass:47 - Browser closed successfully
+2026-03-14 21:18:42 INFO  BaseClass:60 - Extent Reports flushed
